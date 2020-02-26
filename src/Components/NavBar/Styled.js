@@ -1,3 +1,4 @@
+import Zoom from "@material-ui/core/Zoom";
 import styled from 'styled-components';
 import Typography from "@material-ui/core/Typography";
 import {
@@ -5,15 +6,23 @@ import {
     Button
 } from '@material-ui/core';
 
+export const ZoomStyled = styled(Zoom)``;
+
+export const D1Styled = styled.div`
+
+ transition:  0.7s ease-out;
+`;
+
 export const NavBarContainer = styled.div `
   display: flex;
-  flex-direction: row;
-  top: 0;
+  flex-direction: column;
+  bottom: 0;
+  left: 0;
   position: absolute;
-  height: 100%;
-  width: 100%;
+  height: 10%;
+  width: 100vw;
+
   overflow: hidden; @media (max-width: 767px) {
-    flex-direction: column;
 
   }
   @media (max-width: 400px) {
@@ -22,8 +31,8 @@ export const NavBarContainer = styled.div `
   }
 `;
 export const ButtonStyled = styled(Button)`
-height: 100%;
-width: 50%;
+height: 50%;
+width: 100vw;
 :hover {
 		color:  red ;
 		cursor: pointer;}
@@ -36,13 +45,13 @@ width: 50%;
   }
 `;
 export const Video = styled.video `
-  width: 50vw;
-
-  height:98vh;
-  z-index: -1;
+  width: 100vw;
+  left: 0;
+  height:20vh;
+  z-index: -4;
   object-fit: fill;  
   overflow: hidden; @media (max-width: 767px) {
-    height: 49vh;
+  height: 49vh;
 width: 100%;
 }
 @media (max-width: 400px) {
@@ -67,9 +76,9 @@ export const Image = styled.img `
 
 export const TextStyled = styled.div`
   position: absolute;
- justify-self: center;
-  font-size: 7em;
-  padding-top: 50%;
-  z-index: -1; 
+  top:0;
+  left: 0;
+  font-size: 2.5em;
+  z-index: 1; 
   color : red;
 `;

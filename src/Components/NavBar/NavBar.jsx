@@ -6,33 +6,41 @@ import coverimg2 from "../../Images/dollaz.gif";
 import {ButtonStyled,
     NavBarContainer,
 Video,
-Image,
-Image2,
+ZoomStyled,
+D1Styled,
 TextStyled} from "./Styled"
 const Navbar = () => {
+  const [checked, setChecked] = useState(false);
+  const [checked2, setChecked2] = useState(false);
+  const [name, setName] = useState("");
+
 
     return (
         
       <NavBarContainer  >
-          <ButtonStyled>
+  
+          <ButtonStyled         onMouseEnter={() => setChecked(true)}
+        onMouseLeave={() => setChecked(false)}>    
+                 <TextStyled>
+                LISTEN
+              </TextStyled>       
+              <ZoomStyled in={checked}>
               <Video  width="" height="" autoPlay loop muted>
                   <source  src={covervid1} type="video/mp4" />
-              </Video>
-              <Image src={coverimg}/>
-              <TextStyled>
-                LISTEN
-              </TextStyled>
-
+              </Video>     
+                       </ZoomStyled>
           </ButtonStyled>
-          <ButtonStyled>
-              <Video  width="" height="" autoPlay loop muted>
-                  <source  src={covervid2} type="video/mp4" />
-              </Video>
-              <Image2 src={coverimg2}/>
-              <TextStyled>
-                SHOP
-              </TextStyled>
-          </ButtonStyled>
+          <ButtonStyled onMouseEnter={() => setChecked2(true)}
+        onMouseLeave={() => setChecked2(false)}> 
+           <TextStyled>
+          SHOP
+        </TextStyled>       
+        <ZoomStyled in={checked2}>
+        <Video  width="" height="" autoPlay loop muted>
+            <source  src={covervid2} type="video/mp4" />
+        </Video>     
+                 </ZoomStyled>
+    </ButtonStyled>
     
       </NavBarContainer>
     );

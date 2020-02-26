@@ -15,8 +15,8 @@ class App extends Component {
 
      <Fragment>
        <ThreeDLoader  />
-  {/* <NavBar/>
-  <Video/> */}
+  <NavBar/>
+  {/* <Video/> */}
  </Fragment> 
 
     );
