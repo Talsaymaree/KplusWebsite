@@ -16,11 +16,11 @@ export const D1Styled = styled.div`
 export const NavBarContainer = styled.div `
   display: flex;
   flex-direction: column;
-  bottom: 0;
-  left: 0;
+  top:7vh;
+  left:  1vw;
   position: absolute;
   height: 10%;
-  width: 100vw;
+  width: 30vw;
 
   overflow: hidden; @media (max-width: 767px) {
 
@@ -45,7 +45,7 @@ width: 100vw;
   }
 `;
 export const Video = styled.video `
-  width: 100vw;
+  width: 80vw;
   left: 0;
   height:20vh;
   z-index: -4;

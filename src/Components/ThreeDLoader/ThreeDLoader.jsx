@@ -21,7 +21,6 @@ const renderer = new THREE.WebGLRenderer({
     alpha: true
 });
 renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setClearColor(0x000000, 0);
 const container = document.getElementById('header-container');
 container.appendChild(renderer.domElement);
  const controls = new OrbitControls(camera, renderer.domElement);
@@ -41,12 +40,17 @@ const loadObjModel = (materialURL, objectURL) => {
     objLoader.load(
       objectURL,
       object => {
+        object.traverse( function( node ) {
+            if( node.material ) {
+                node.material.side = THREE.DoubleSide;
+            }
+        });
         //const root = object.detail.loaderRootNode;
         console.log("Loaded Obj" + object);
         let mesh = object;
         scene.add(object);
         mesh.position.set(0, -13, 0);
-        mesh.scale.set(1.5, 1.5, 0.07);
+        mesh.scale.set(1.5, 1.5, 3);
       },
       xhr => {
         console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
@@ -57,20 +61,20 @@ const loadObjModel = (materialURL, objectURL) => {
       }
     );
   });
-};
+}; 
 
-var keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 75%)'), .5);
-keyLight.position.set(-100, 0, 100);
+var keyLight = new THREE.AmbientLight(new THREE.Color('hsl(30, 100%, 75%)'), .9);
+keyLight.position.set(-100, 0, 50);
 
-var fillLight = new THREE.DirectionalLight(new THREE.Color('hsl(240, 100%, 75%)'), 0.3);
-fillLight.position.set(100, 0, 100);
+var fillLight = new THREE.AmbientLight(new THREE.Color('hsl(240, 60%, 75%)'), .7);
+fillLight.position.set(100, 0, 50);
 
 var backLight = new THREE.DirectionalLight(0xffffff, .2);
 backLight.position.set(100, 0, -100).normalize();
 
 scene.add(keyLight);
 scene.add(fillLight);
-scene.add(backLight);
+// scene.add(backLight);
 
 
 loadObjModel(catmtl, cat);

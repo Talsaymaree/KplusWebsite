@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
-import covervid1 from "../../Video/streamvid.mp4";
-import covervid2 from "../../Video/cart3.mp4";
+import covervid1 from "../../Video/streamvid4.mp4";
+import covervid2 from "../../Video/cart4.mp4";
 import coverimg from "../../Images/kplus.gif";
 import coverimg2 from "../../Images/dollaz.gif";
 import {ButtonStyled,
