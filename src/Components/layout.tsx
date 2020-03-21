@@ -17,7 +17,7 @@ interface Props {
 
 const Layout = ({ children }: Props) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query SiteTitlesQuery {
       site {
         siteMetadata {
           title
