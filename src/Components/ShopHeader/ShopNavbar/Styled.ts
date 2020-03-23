@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from 'styled-components';577
+
 // import {
 //   IconButton,
 //   Button
@@ -18,9 +19,14 @@ export const Container = styled.div`
   flex-direction: column;
 `;
 
+
+
 export const IconContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
+  & > svg{
+    margin: .2em;
+  }
 `;
 
 export const TitleBand = styled.div`

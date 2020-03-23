@@ -1,15 +1,19 @@
 import React, { ReactNode } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import ShopLayout from "../../components/ShopLayout/ShopLayout"
+import { SiteTitlesQuery } from '../../../graphql-types'
+import { ThemeProvider } from "@material-ui/core";
+import {theme} from '../../utils/globalStyle';
 
 interface Props {
   children: ReactNode
 }
 
 const Layout = ({ children }: Props) => {
-  const data = useStaticQuery(graphql`
-    query ShopTitleQuery {
+  const data: SiteTitlesQuery = useStaticQuery(graphql`
+    query ShopTitle {
       site {
         siteMetadata {
           title
@@ -19,9 +23,8 @@ const Layout = ({ children }: Props) => {
   `)
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <ShopLayout>
-
         <div
           style={{
             margin: `0 auto`,
@@ -29,6 +32,7 @@ const Layout = ({ children }: Props) => {
             padding: `0 1.0875rem 1.45rem`,
           }}
         >
+          <p>{data.site?.siteMetadata?.title}</p>
           <main>{children}</main>
           <footer>
             © {new Date().getFullYear()}, Built with
@@ -37,7 +41,7 @@ const Layout = ({ children }: Props) => {
           </footer>
         </div>
       </ShopLayout>
-    </>
+    </ThemeProvider>
   )
 }
 

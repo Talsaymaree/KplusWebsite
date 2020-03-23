@@ -1,12 +1,14 @@
 import React from 'react'
 import ShopNavbar from './ShopNavbar/ShopNavbar'
+import { Container } from './styled'
+import ShopHeroFeature from './ShopHeroFeature/ShopHeroFeature';
 
 const ShopHeader = () => {
   return (
-    <div>
+    <Container>
       <ShopNavbar />
-      <p>this is the header bro</p>
-    </div>
+      <ShopHeroFeature />
+    </Container>
   )
 }
 

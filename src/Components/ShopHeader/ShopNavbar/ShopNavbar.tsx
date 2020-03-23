@@ -7,6 +7,7 @@ import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import MenuIcon from '@material-ui/icons/Menu';
 
 const ShopNavbar = () => {
+
   return (
     <Container>
       <TitleBand>
@@ -14,9 +15,9 @@ const ShopNavbar = () => {
           KShop
         </Typography>
         <IconContainer>
-          <SearchIcon />
-          <PermIdentityOutlinedIcon />
-          <ShoppingCartOutlinedIcon />
+          <SearchIcon fontSize='large' />
+          <PermIdentityOutlinedIcon fontSize='large' />
+          <ShoppingCartOutlinedIcon fontSize='large' />
         </IconContainer>
       </TitleBand>
       <Menu>

@@ -19,6 +19,7 @@
         "preserveConstEnums": true
     },
     "include": [
-        "./src/**/*"
+        "./src/**/*",
+        "graphql-types.ts"
     ]
 }

@@ -20,7 +20,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-graphql-codegen`,
-
     {
       resolve: `gatsby-remark-images-contentful`,
       options: {
