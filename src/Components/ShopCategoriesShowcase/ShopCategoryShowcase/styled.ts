@@ -10,7 +10,7 @@ export const Container = styled.div`
 `;
 
 export const Image = styled(Img)`
-    width: 300px;
+    width: 98vw;
 `;
 
 export const DescriptionBox = styled(AbsoluteMiddleDiv)`
