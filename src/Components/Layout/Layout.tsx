@@ -4,20 +4,11 @@ import { useStaticQuery, graphql } from "gatsby"
 import "./layout.css"
 import Navbar from "../NavBar/NavBar"
 
-interface Props{
+interface Props {
   children: ReactNode
 }
 
 const Layout = ({ children }: Props) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
 
   return (
     <>
