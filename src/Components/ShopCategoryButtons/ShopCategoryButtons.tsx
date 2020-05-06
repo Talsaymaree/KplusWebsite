@@ -8,7 +8,7 @@ const ShopCategoryButtons = () => {
                 all
             </Category>
             <Category>
-                Featured
+                Featureded
             </Category>
             <Category>
                 Special
