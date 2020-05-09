@@ -3,8 +3,10 @@ import ShopTitleSection from './../ShopTitleSection/ShopTitleSection';
 import ShopProductShowcase from './../ShopProductShowcase/ShopProductShowcase';
 import { Container } from './styled'
 import ShowProductsShowcase from '../ShopProductShowcase/ShopProductsShowcase/ShowProductsShowcase';
-import ShopCategoriesShowcase from '../ShopCategoriesShowcase/ShopCategoriesShowcase';
-import ShopCategoryButtons from './../ShopCategoryButtons/ShopCategoryButtons';
+import ShopByCategory from '../ShopByCategory/ShopByCategory';
+import Testimonial from '../Testimonial/Testimonial';
+import Labels from '../Labels/Labels';
+import Instagram from './../Instagram/Instagram';
 
 const ShopMainContent = () => {
     return (
@@ -12,13 +14,21 @@ const ShopMainContent = () => {
             <ShopTitleSection>
                 deal of the day
             </ShopTitleSection>
-            <ShopProductShowcase single />
+            <ShopProductShowcase buttons price description />
             <ShowProductsShowcase />
             <ShopTitleSection>
                 shop by category
             </ShopTitleSection>
-            <ShopCategoriesShowcase />
-            <ShopCategoryButtons />
+            <ShopByCategory />
+            <Testimonial />
+            <ShopTitleSection>
+                affiliated labels
+            </ShopTitleSection>
+            <Labels />
+            <ShopTitleSection>
+                instagram
+            </ShopTitleSection>
+            <Instagram />
         </Container>
     )
 }
