@@ -1,33 +1,28 @@
 import React, { useRef } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { FeaturePropsQuery } from '../../../../graphql-types';
-import { Container, ImageScroller, SliderStyled, ImgStyled } from './Styled';
-import Img from 'gatsby-image';
+import { BrowseButton, Container, InfoText, ImageScroller, SubTitle, Title, InfoContainer, SliderStyled, ImgStyled } from './Styled';
+import Img, { FluidObject } from 'gatsby-image';
 
 const ShopHeroFeature = () => {
   const sliderRef = useRef();
 
   const data: FeaturePropsQuery = useStaticQuery(graphql`
     query FeatureProps {
-      allContentfulFeatureProducts {
+      allContentfulHeroImage {
         edges {
           node {
-            price
-            title
-            updatedAt
-            featuredPicture {
-              fluid(maxWidth: 700) {
+            backgroundImage {
+              fluid(maxWidth: 900) {
                 ...GatsbyContentfulFluid
               }
-              contentful_id
-            }
+            },
+            alt
           }
         }
       }
     }
   `)
-
-  const images = data.allContentfulFeatureProducts.edges;
 
   const settings = {
     dots: false,
@@ -39,7 +34,24 @@ const ShopHeroFeature = () => {
 
   return (
     <Container>
-      <ImgStyled fluid={images[0].node.featuredPicture?.fluid} />
+      <ImgStyled alt={data.allContentfulHeroImage.edges[0].node.alt} fluid={data.allContentfulHeroImage.edges[0].node.backgroundImage?.fluid as FluidObject} />
+      <InfoContainer>
+        <Title variant="h5">
+          Shop is for Fun
+              </Title>
+        <SubTitle variant="h6">
+          Browse our premium product
+              </SubTitle>
+        <InfoText>
+          
+          Us which over of signs divide dominion deep fill bring they're meat beho upon own earth without morning over third. Their male dry. They are great appear whose land fly grass.
+              </InfoText>
+        <BrowseButton variant="contained" color="primary">
+          <InfoText>
+            Start browsing
+                </InfoText>
+        </BrowseButton>
+      </InfoContainer>
     </Container >
   )
 }

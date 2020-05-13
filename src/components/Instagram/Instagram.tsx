@@ -27,12 +27,14 @@ const Instagram = () => {
       `);
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: false,
-    speed: 500,
+    speed: 1500,
     slidesToShow: 8,
     slidesToScroll: 4,
     initialSlide: 0,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1024,
@@ -46,6 +48,7 @@ const Instagram = () => {
       {
         breakpoint: 600,
         settings: {
+          infinite: true,
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2
@@ -54,6 +57,7 @@ const Instagram = () => {
       {
         breakpoint: 480,
         settings: {
+          infinite: true,
           slidesToShow: 2,
           slidesToScroll: 2
         }

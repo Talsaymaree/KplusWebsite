@@ -5,7 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import ShopLayout from "../../components/ShopLayout/ShopLayout"
 import { SiteTitlesQuery } from '../../../graphql-types'
 import { ThemeProvider } from "@material-ui/core";
-import {theme} from '../../utils/globalStyle';
+import { theme } from '../../utils/globalStyle';
+import { Helmet } from 'react-helmet';
 
 interface Props {
   children: ReactNode
@@ -24,23 +25,13 @@ const Layout = ({ children }: Props) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <ShopLayout>
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0 1.0875rem 1.45rem`,
-          }}
-        >
-          <p>{data.site?.siteMetadata?.title}</p>
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-          {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
-        </div>
-      </ShopLayout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Shoping section</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+      </Helmet>
+      <ShopLayout />
     </ThemeProvider>
   )
 }
