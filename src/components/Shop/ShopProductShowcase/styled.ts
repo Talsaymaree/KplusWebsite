@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Img from "gatsby-image";
-import {theme} from '../../utils/globalStyle';
+import {theme} from '../../../utils/globalStyle';
 import { Typography } from '@material-ui/core';
 
 export const Container = styled.div`

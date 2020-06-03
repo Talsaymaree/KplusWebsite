@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 import Typography from '@material-ui/core/Typography';
-import { AbsoluteMiddleDiv } from './../../../utils/commonStyled';
+import { AbsoluteMiddleDiv } from './../../../../utils/commonStyled';
 
 export const Container = styled.div`
     display: flex;

@@ -38,13 +38,14 @@ export const InfoContainer = styled.div`
     position: absolute;
     bottom: 0px;
     display: flex;
-    margin: 1em 0;
+    margin: 0;
     padding: 1em;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: column;
+    align-items: flex-start;
     height: 100%;
     width: 100%;
-    background: rgba(255,255,255,.3)
+    background: rgba(255,255,255,.4);
 `;
 
 export const Title = styled(Typography)`

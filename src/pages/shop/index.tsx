@@ -2,7 +2,7 @@ import React, { ReactNode } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ShopLayout from "../../components/ShopLayout/ShopLayout"
+import ShopLayout from "../../components/Shop/ShopLayout/ShopLayout"
 import { SiteTitlesQuery } from '../../../graphql-types'
 import { ThemeProvider } from "@material-ui/core";
 import { theme } from '../../utils/globalStyle';

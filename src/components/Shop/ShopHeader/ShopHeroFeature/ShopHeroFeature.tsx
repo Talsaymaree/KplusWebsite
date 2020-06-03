@@ -34,7 +34,7 @@ const ShopHeroFeature = () => {
 
   return (
     <Container>
-      <ImgStyled alt={data.allContentfulHeroImage.edges[0].node.alt} fluid={data.allContentfulHeroImage.edges[0].node.backgroundImage?.fluid as FluidObject} />
+      <ImgStyled alt={data.allContentfulHeroImage.edges[0].node.alt || ""} fluid={data.allContentfulHeroImage.edges[0].node.backgroundImage?.fluid as FluidObject} />
       <InfoContainer>
         <Title variant="h5">
           Shop is for Fun
@@ -43,13 +43,13 @@ const ShopHeroFeature = () => {
           Browse our premium product
               </SubTitle>
         <InfoText>
-          
+
           Us which over of signs divide dominion deep fill bring they're meat beho upon own earth without morning over third. Their male dry. They are great appear whose land fly grass.
               </InfoText>
         <BrowseButton variant="contained" color="primary">
           <InfoText>
             Start browsing
-                </InfoText>
+          </InfoText>
         </BrowseButton>
       </InfoContainer>
     </Container >

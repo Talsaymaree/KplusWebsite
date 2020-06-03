@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, SliderStyled, TestiomonialContent, AllTestimony, Text, Title, Overlay, Info } from './styled';
 import { useStaticQuery, graphql } from 'gatsby'
-import { TestimonialsPropsQuery } from '../../../graphql-types'
+import { TestimonialsPropsQuery } from '../../../../graphql-types'
 import { FluidObject } from 'gatsby-image';
 import { Typography } from '@material-ui/core';
 

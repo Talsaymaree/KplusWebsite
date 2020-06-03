@@ -1,7 +1,7 @@
 import React from 'react';
 import ShopProductShowcase from '../ShopProductShowcase';
 import { graphql, useStaticQuery } from 'gatsby';
-import { ShopProductShowcasePropsQuery, ContentfulProduct } from '../../../../graphql-types';
+import { ShopProductShowcasePropsQuery, ContentfulProduct } from '../../../../../graphql-types';
 import { Container, Product } from './styled';
 
 const ShowProductsShowcase = () => {

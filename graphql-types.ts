@@ -4882,8 +4882,8 @@ export type ImageSharpFluid = {
   sizes: Scalars['String'];
   originalImg?: Maybe<Scalars['String']>;
   originalName?: Maybe<Scalars['String']>;
-  presentationWidth?: Maybe<Scalars['Int']>;
-  presentationHeight?: Maybe<Scalars['Int']>;
+  presentationWidth: Scalars['Int'];
+  presentationHeight: Scalars['Int'];
 };
 
 export type ImageSharpFluidFilterInput = {
@@ -4977,8 +4977,8 @@ export type ImageSharpSizes = {
   sizes: Scalars['String'];
   originalImg?: Maybe<Scalars['String']>;
   originalName?: Maybe<Scalars['String']>;
-  presentationWidth?: Maybe<Scalars['Int']>;
-  presentationHeight?: Maybe<Scalars['Int']>;
+  presentationWidth: Scalars['Int'];
+  presentationHeight: Scalars['Int'];
 };
 
 export type ImageSharpSizesFilterInput = {
@@ -5103,10 +5103,10 @@ export type Query = {
   allSite: SiteConnection;
   imageSharp?: Maybe<ImageSharp>;
   allImageSharp: ImageSharpConnection;
-  contentfulHeroImage?: Maybe<ContentfulHeroImage>;
-  allContentfulHeroImage: ContentfulHeroImageConnection;
   contentfulAsset?: Maybe<ContentfulAsset>;
   allContentfulAsset: ContentfulAssetConnection;
+  contentfulHeroImage?: Maybe<ContentfulHeroImage>;
+  allContentfulHeroImage: ContentfulHeroImageConnection;
   contentfulInstagramPicture?: Maybe<ContentfulInstagramPicture>;
   allContentfulInstagramPicture: ContentfulInstagramPictureConnection;
   contentfulTestimonialsTestimonyTextNode?: Maybe<ContentfulTestimonialsTestimonyTextNode>;
@@ -5301,30 +5301,6 @@ export type QueryAllImageSharpArgs = {
 };
 
 
-export type QueryContentfulHeroImageArgs = {
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
-  alt?: Maybe<StringQueryOperatorInput>;
-  backgroundImage?: Maybe<ContentfulAssetFilterInput>;
-  spaceId?: Maybe<StringQueryOperatorInput>;
-  contentful_id?: Maybe<StringQueryOperatorInput>;
-  createdAt?: Maybe<DateQueryOperatorInput>;
-  updatedAt?: Maybe<DateQueryOperatorInput>;
-  sys?: Maybe<ContentfulHeroImageSysFilterInput>;
-  node_locale?: Maybe<StringQueryOperatorInput>;
-};
-
-
-export type QueryAllContentfulHeroImageArgs = {
-  filter?: Maybe<ContentfulHeroImageFilterInput>;
-  sort?: Maybe<ContentfulHeroImageSortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
-};
-
-
 export type QueryContentfulAssetArgs = {
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
@@ -5346,6 +5322,30 @@ export type QueryContentfulAssetArgs = {
 export type QueryAllContentfulAssetArgs = {
   filter?: Maybe<ContentfulAssetFilterInput>;
   sort?: Maybe<ContentfulAssetSortInput>;
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+};
+
+
+export type QueryContentfulHeroImageArgs = {
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+  alt?: Maybe<StringQueryOperatorInput>;
+  backgroundImage?: Maybe<ContentfulAssetFilterInput>;
+  spaceId?: Maybe<StringQueryOperatorInput>;
+  contentful_id?: Maybe<StringQueryOperatorInput>;
+  createdAt?: Maybe<DateQueryOperatorInput>;
+  updatedAt?: Maybe<DateQueryOperatorInput>;
+  sys?: Maybe<ContentfulHeroImageSysFilterInput>;
+  node_locale?: Maybe<StringQueryOperatorInput>;
+};
+
+
+export type QueryAllContentfulHeroImageArgs = {
+  filter?: Maybe<ContentfulHeroImageFilterInput>;
+  sort?: Maybe<ContentfulHeroImageSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
@@ -6634,6 +6634,8 @@ export type GatsbyImageSharpFixed_NoBase64Fragment = Pick<ImageSharpFixed, 'widt
 export type GatsbyImageSharpFixed_WithWebp_NoBase64Fragment = Pick<ImageSharpFixed, 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
 
 export type GatsbyImageSharpFluidFragment = Pick<ImageSharpFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
+
+export type GatsbyImageSharpFluidLimitPresentationSizeFragment = { maxHeight: ImageSharpFluid['presentationHeight'], maxWidth: ImageSharpFluid['presentationWidth'] };
 
 export type GatsbyImageSharpFluid_TracedSvgFragment = Pick<ImageSharpFluid, 'tracedSVG' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 

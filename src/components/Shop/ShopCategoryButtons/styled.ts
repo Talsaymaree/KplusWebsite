@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Typography from '@material-ui/core/Typography';
-import { theme } from './../../utils/globalStyle';
+import { theme } from '../../../utils/globalStyle';
 
 export const Category = styled(Typography)<{ selected?: boolean }>`
     color: #444;

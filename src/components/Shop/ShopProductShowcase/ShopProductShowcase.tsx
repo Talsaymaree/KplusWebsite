@@ -6,7 +6,7 @@ import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import { Fab } from '@material-ui/core';
 import ShopStar from '../ShopStar/ShopStar';
 import { FluidObject } from 'gatsby-image';
-import { ContentfulProduct } from '../../../graphql-types';
+import { ContentfulProduct } from '../../../../graphql-types';
 
 interface Props {
   buttons?: boolean; // determine if the buttons should be shown

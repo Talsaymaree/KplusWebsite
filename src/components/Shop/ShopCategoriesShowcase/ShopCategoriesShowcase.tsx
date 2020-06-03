@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { ShopCategoriesShowcasePropsQuery } from '../../../graphql-types'
+import { ShopCategoriesShowcasePropsQuery } from '../../../../graphql-types'
 import { Container, SliderStyled } from './styled';
 import ShopCategoryShowcase from './ShopCategoryShowcase/ShopCategoryShowcase';
 import { FluidObject } from 'gatsby-image';
