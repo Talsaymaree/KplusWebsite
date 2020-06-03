@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import Typography from "@material-ui/core/Typography";
 
-export const Container = styled.div`
+export const TextContainer = styled.div`
   background: black;
   display: flex;
   justify-content: center;
@@ -77,12 +77,12 @@ const IndexPage = () => {
   };
 
   return (
-    <Container>
+    <TextContainer>
       <H1 variant="h2">
         {displayedText}
         <Caret />
       </H1>
-    </Container>
+    </TextContainer>
   );
 };
 
