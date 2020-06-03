@@ -19,7 +19,7 @@ export const caret = keyframes`
 }
 `;
 
-export const H1 = styled(Typography)``;
+export const Text1 = styled(Typography)``;
 
 export const Caret = styled.span`
 border-right: white 0.05em solid;

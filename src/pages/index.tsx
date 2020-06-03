@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
-import { TextContainer, H1 } from '../components/Styled/styled';
+import { TextContainer, Text1 } from '../components/Styled/styled';
 
 
 export const Caret = styled.span`
@@ -60,10 +60,10 @@ const IndexPage = () => {
 
   return (
     <TextContainer>
-      <H1 variant="h2">
+      <Text1 variant="h2">
         {displayedText}
         <Caret />
-      </H1>
+      </Text1>
     </TextContainer>
   );
 };
