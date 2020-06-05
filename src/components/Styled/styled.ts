@@ -10,7 +10,7 @@ export const TextContainer = styled.div`
   width: 99vw;
   height: 100vh;
   color: white;
-  font: 10em "Helvetica", "Fira Sans", sans-serif;
+
 `;
 
 export const caret = keyframes`
