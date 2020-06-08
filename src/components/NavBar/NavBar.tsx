@@ -1,47 +1,49 @@
-import React, { useState } from "react";
-import covervid1 from "../../images/videos/streamvid4.mp4";
-import covervid2 from "../../images/videos/cart4.mp4";
+import React, { useState, Fragment } from "react";
+import { SwipeableDrawer, List, ListItem, ListItemIcon, ListItemText, IconButton } from '@material-ui/core'
 
 import {
-  ButtonStyled,
-  NavBarContainer,
-  Video,
-  ZoomStyled,
-  TextStyled
+  Container,
+  ActiveItem
 } from "./Styled"
+
+import HomeIcon from '@material-ui/icons/Home';
+import AddIcon from '@material-ui/icons/Add';
+import SearchIcon from '@material-ui/icons/Search';
+import NavBarSubList from './NavBarSubList/NavBarSubList';
 
 const Navbar = () => {
   const [checked, setChecked] = useState(false);
-  const [checked2, setChecked2] = useState(false);
+  const [checked2, setCheced] = useState(false);
 
   return (
+    <Container>
+      <List aria-label="main navbar for this website">
+        <ActiveItem button key="Home" color="secondary">
+          <ListItemIcon color="secondary">
+            <HomeIcon color="secondary"/>
+          </ListItemIcon>
+          <ListItemText primary="Home" color="secondary" />
+        </ActiveItem>
+        {
+          ['All mail', 'Trash', 'Spam'].map((text, index) => (
+            <ListItem button key={text}>
+              <ListItemIcon >{index % 2 === 0 ? <AddIcon /> : <SearchIcon />}</ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItem>
+          ))
+        }
+        <NavBarSubList />
+        {
+          ['Banana juice', 'Cosco'].map((text, index) => (
+            <ListItem button key={text}>
+              <ListItemIcon >{index % 2 === 0 ? <AddIcon /> : <SearchIcon />}</ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItem>
+          ))
+        }
 
-    <NavBarContainer  >
-
-      <ButtonStyled onMouseEnter={() => setChecked(true)}
-        onMouseLeave={() => setChecked(false)}>
-        <TextStyled>
-          LISTEN
-              </TextStyled>
-        <ZoomStyled in={checked}>
-          <Video width="" height="" autoPlay loop muted>
-            <source src={covervid1} type="video/mp4" />
-          </Video>
-        </ZoomStyled>
-      </ButtonStyled>
-      <ButtonStyled onMouseEnter={() => setChecked2(true)}
-        onMouseLeave={() => setChecked2(false)}>
-        <TextStyled>
-          SHOP
-        </TextStyled>
-        <ZoomStyled in={checked2}>
-          <Video width="" height="" autoPlay loop muted>
-            <source src={covervid2} type="video/mp4" />
-          </Video>
-        </ZoomStyled>
-      </ButtonStyled>
-
-    </NavBarContainer>
+      </List>
+    </Container>
   );
 };
 

@@ -1,13 +1,13 @@
 import React from 'react'
 import { Container, SliderStyled } from './styled'
 import { graphql, useStaticQuery } from 'gatsby';
-import { InstagramPicturePropsQuery } from '../../../../graphql-types'
+import { AlbumShowcasesPropsQuery } from '../../../graphql-types'
 import { FluidObject } from 'gatsby-image';
-import InstagramPicture from './InstagramPicture/InstagramPicture';
+import AlbumShowcase from './AlbumShowcase/AlbumShowcase';
 
-const Instagram = () => {
-  const data: InstagramPicturePropsQuery = useStaticQuery(graphql`
-    query InstagramPictureProps{
+const AlbumShowcases = () => {
+  const data: AlbumShowcasesPropsQuery = useStaticQuery(graphql`
+    query AlbumShowcasesProps{
         allContentfulInstagramPicture {
             edges {
                 node {
@@ -69,7 +69,7 @@ const Instagram = () => {
     <Container>
       <SliderStyled {...settings}>
         {data.allContentfulInstagramPicture.edges.map(ele =>
-          <InstagramPicture
+          <AlbumShowcase
             key={ele.node.id}
             link={ele.node.link || "#"}
             picture={ele.node.picture?.fluid as FluidObject}
@@ -83,4 +83,4 @@ const Instagram = () => {
   )
 }
 
-export default Instagram
+export default AlbumShowcases

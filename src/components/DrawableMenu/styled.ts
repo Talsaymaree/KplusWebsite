@@ -7,7 +7,6 @@ import { theme } from './../../utils/globalStyle';
 export const Container = styled(AppBar)`
     top: auto;
     bottom: 0;
-    z-index: 10;
     background: ${theme.palette.background.paper}
 `;
 

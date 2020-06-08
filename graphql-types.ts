@@ -6507,6 +6507,22 @@ export type StringQueryOperatorInput = {
   glob?: Maybe<Scalars['String']>;
 };
 
+export type AlbumShowcasesPropsQueryVariables = {};
+
+
+export type AlbumShowcasesPropsQuery = { allContentfulInstagramPicture: { edges: Array<{ node: (
+        Pick<ContentfulInstagramPicture, 'createdAt' | 'id' | 'link' | 'alt'>
+        & { picture?: Maybe<{ fluid?: Maybe<GatsbyContentfulFluidFragment> }> }
+      ) }> } };
+
+export type HeroHeaderPropsQueryVariables = {};
+
+
+export type HeroHeaderPropsQuery = { allContentfulHeroImage: { edges: Array<{ node: (
+        Pick<ContentfulHeroImage, 'alt'>
+        & { backgroundImage?: Maybe<{ fluid?: Maybe<GatsbyContentfulFluidFragment> }> }
+      ) }> } };
+
 export type InstagramPicturePropsQueryVariables = {};
 
 

@@ -1,6 +1,8 @@
 import { createGlobalStyle } from "styled-components"
 import { createMuiTheme } from "@material-ui/core";
 
+const textColor = '#9ca8b0';
+
 export const theme = createMuiTheme({
   overrides: {
     MuiButton: {
@@ -16,17 +18,22 @@ export const theme = createMuiTheme({
   },
   palette: {
     primary: {
-      light: '#3F4855',
-      main: '#222831',
-      dark: '#0D1624',
-      contrastText: '#fff',
+      main: '#131722',
+      contrastText: textColor
     },
     secondary: {
-      light: '#00F3FF',
-      main: '#00adb5',
-      dark: '#00656A',
-      contrastText: '#0D1624',
+      main: '#ff1744',
+      contrastText: textColor
     },
+    background: {
+      paper: '#0c101b',
+    },
+    contrastThreshold: 3,
+    tonalOffset: 0.2,
+    text: {
+      primary: textColor,
+      secondary: '#ff1744'
+    }
   },
   typography: {
     fontSize: 14,
@@ -43,27 +50,16 @@ export const theme = createMuiTheme({
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"',
     ].join(','),
-  },
-  props: {
-    MuiTypography: {
-      variantMapping: {
-        h1: 'h2',
-        h2: 'h2',
-        h3: 'h2',
-        h4: 'h2',
-        h5: 'h2',
-        h6: 'h2',
-        subtitle1: 'h2',
-        subtitle2: 'h2',
-        body1: 'span',
-        body2: 'span',
-      },
-    },
-  },
+  }
 });
+
+// main background: #131722
+// second background: #0c101b
+// accent: #ff1744
 
 export const GlobalStyle = createGlobalStyle`
   body {
-    color: ${props => (props.theme === "purple" ? theme.palette.primary.light : "white")};
+    background: ${theme.palette.primary.main};
+    color: ${textColor};
   }
 `
