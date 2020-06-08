@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { HeroHeaderPropsQuery } from '../../../graphql-types';
-import { BrowseButton, Container, InfoText, ImageScroller, SubTitle, Title, InfoContainer, SliderStyled, ImgStyled } from './atyled';
+import { BrowseButton, Container, InfoText, ImageScroller, SubTitle, Title, InfoContainer, SliderStyled, ImgStyled } from './styled';
 import Img, { FluidObject } from 'gatsby-image';
 
 const ShopHeroFeature = () => {
