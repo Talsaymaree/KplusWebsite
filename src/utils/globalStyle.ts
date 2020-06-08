@@ -61,5 +61,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background: ${theme.palette.primary.main};
     color: ${textColor};
+    margin: 0;
+    padding: 0;
   }
 `

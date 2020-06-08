@@ -18,11 +18,11 @@ export const SliderStyled = styled(Slider)`
     align-items: center;
 
     .slick-prev{
-        left: 50px;
+        left: 30px;
     }
 
     .slick-next{
-        right: 50px;
+        right: 30px;
     }
 
     .slick-prev ,.slick-next{

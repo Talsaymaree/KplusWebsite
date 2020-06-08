@@ -19,6 +19,15 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+    },
     `gatsby-plugin-graphql-codegen`,
     {
       resolve: `gatsby-remark-images-contentful`,

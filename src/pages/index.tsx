@@ -25,7 +25,7 @@ const IndexPage = () => {
         <AlbumShowcases />
         <SectionHeader title="Latest Posts" subtitle="Checkout What's new at our blog" />
         <PaperCard>
-        <SectionHeader title="Latest Posts" subtitle="Checkout What's new at our blog" />
+        <SectionHeader title="Most Popular This Week" subtitle="Checkout What's new at our blog" />
         </PaperCard>
       </MainContent>
       <Footer />
