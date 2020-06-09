@@ -1,29 +1,11 @@
 import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
-import Typography from "@material-ui/core/Typography";
+import { TextContainer, Text1 } from '../components/Styled/styled';
 
-export const Container = styled.div`
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 99vw;
-  height: 100vh;
-  color: white;
-  font: 10em "Helvetica", "Fira Sans", sans-serif;
-`;
-
-const caret = keyframes`
-  50% {
-    border-color: transparent;
-  }
-`;
-
-export const H1 = styled(Typography)``;
 
 export const Caret = styled.span`
-  border-right: white 0.05em solid;
-  animation: caret 1s steps(1) infinite;
+border-right: white 0.05em solid;
+animation: caret 1s steps(1) infinite;
 `;
 
 const IndexPage = () => {
@@ -77,12 +59,12 @@ const IndexPage = () => {
   };
 
   return (
-    <Container>
-      <H1 variant="h2">
+    <TextContainer>
+      <Text1 variant="h2">
         {displayedText}
         <Caret />
-      </H1>
-    </Container>
+      </Text1>
+    </TextContainer>
   );
 };
 
